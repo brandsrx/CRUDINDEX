@@ -3,6 +3,7 @@ const readUser = document.getElementById("readUser")
 let cont = 1;
 let bool = true;
 let key = 0;
+/*-----Eventos de la base de datos IndexDB*/
 bdUserNames.addEventListener("upgradeneeded",()=>{
     const bdName = bdUserNames.result;
     bdName.createObjectStore("names",{
@@ -14,7 +15,7 @@ bdUserNames.addEventListener("success",(e)=>{
     console.log("Se abrio la base de datos NO-SQL Correctamente")
 })
 bdUserNames.addEventListener("error",(e)=>{
-    console.error("ocurrio un errros")
+    console.error("ocurrio un error")
 
 })
 
